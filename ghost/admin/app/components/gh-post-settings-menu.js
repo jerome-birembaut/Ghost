@@ -616,4 +616,16 @@ export default class GhPostSettingsMenu extends Component {
     setSidebarWidthVariable(width) {
         document.documentElement.style.setProperty('--editor-sidebar-width', `${width}px`);
     }
+
+    @action
+    showVeroWidgetForm() {
+        alert('showVeroWidgetForm');
+        this.set('isAddingVeroWidget', true);
+    }
+
+    @action
+    hideVeroWidgetForm() {
+        alert('hideVeroWidgetForm');
+        this.set('isAddingVeroWidget', false);
+    }
 }

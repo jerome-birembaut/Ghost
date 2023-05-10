@@ -181,6 +181,9 @@
                             </button>
                             {{svg-jar "arrow-right" class="arrow-right"}}
                         </li>
+                        <li>
+                          <a href="#" {{action "showVeroWidgetForm"}}>Vero Widget Test</a>
+                        </li>
                     </ul>
                 </form>
                 {{#unless this.post.isNew}}
@@ -193,6 +196,14 @@
             </div>{{! .settings-menu-content }}
         </div>{{! .post-settings-menu }}
 
+         {{#if this.isAddingVeroWidget}}
+          <div class="settings-menu settings-menu-pane settings-menu-pane-wide">
+                 <div class="active">
+                 Hello Vero Form
+                 </div>
+          </div>
+
+         {{/if}}
         {{#if this.isViewingSubview}}
         <div class="settings-menu settings-menu-pane settings-menu-pane-wide">
             <div class="active">
