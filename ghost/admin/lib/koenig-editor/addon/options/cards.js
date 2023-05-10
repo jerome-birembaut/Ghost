@@ -22,7 +22,8 @@ export const CARD_COMPONENT_MAP = {
     audio: 'koenig-card-audio',
     file: 'koenig-card-file',
     product: 'koenig-card-product',
-    header: 'koenig-card-header'
+    header: 'koenig-card-header',
+    vero: 'koenig-card-vero'
 };
 
 // map card names to generic icons (used for ghost elements when dragging)
@@ -47,7 +48,8 @@ export const CARD_ICON_MAP = {
     audio: 'koenig/kg-card-type-audio',
     file: 'koenig/kg-card-type-file',
     product: 'koenig/kg-card-type-product',
-    header: 'koenig/kg-card-type-gen-embed'
+    header: 'koenig/kg-card-type-gen-embed',
+    vero: 'koenig/vero-logo'
 };
 
 // TODO: move koenigOptions directly into cards now that card components register
@@ -73,7 +75,8 @@ export default [
     createComponentCard('file'),
     createComponentCard('product'),
     createComponentCard('paywall', {hasEditMode: false, selectAfterInsert: false}),
-    createComponentCard('header')
+    createComponentCard('header'),
+    createComponentCard('vero')
 ];
 
 export const CARD_MENU = [
@@ -260,8 +263,8 @@ export const CARD_MENU = [
             icon: 'koenig/vero-logo',
             desc: '/vero [test url]',
             matches: ['vero'],
-            type: 'card',
-            replaceArg: 'embed',
+            type: 'vero',
+            replaceArg: 'html',
             params: ['url']
         },{
             label: 'YouTube',

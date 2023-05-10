@@ -1,0 +1,36 @@
+<KoenigCard
+    @icon="koenig/vero-logo"
+    @class={{concat (kg-style "container-card") " mih10 miw-100 relative"}}
+    @headerOffset={{this.headerOffset}}
+    @toolbar={{this.toolbar}}
+    @payload={{this.payload}}
+    @isSelected={{this.isSelected}}
+    @isEditing={{this.isEditing}}
+    @selectCard={{action this.selectCard}}
+    @deselectCard={{action this.deselectCard}}
+    @editCard={{action this.editCard}}
+    @saveCard={{action this.saveCard}}
+    @saveAsSnippet={{this.saveAsSnippet}}
+    @onLeaveEdit={{action "leaveEditMode"}}
+    @editor={{this.editor}}
+>
+    {{#if this.isEditing}}
+        <input
+            placeholder="Enter url"
+            value={{this._input1}}
+            class="kg-link-input pa2 pr6 mih-100 ba br3 shadow-2 f8 lh-heading tracked-2 outline-0 b--green h10 nudge-top--8"
+            {{on "input" (action (mut this._input1) value="target.value")}}
+            {{on "keydown" (action "inputKeydown")}}
+        />
+
+        {{#if this._input1}}
+            <button aria-label="Close" class="kg-input-bar-close" type="button" {{on "click" (action "clear")}}>
+                {{svg-jar "close" class="ih2 stroke-midlightgrey-l2"}}
+            </button>
+        {{/if}}
+
+    {{else}}
+        <div class="koenig-card-html-rendered">{{{sanitize-html this.payload.html}}}</div>
+        <div class="koenig-card-click-overlay"></div>
+    {{/if}}
+</KoenigCard>
