@@ -256,6 +256,14 @@ export const CARD_MENU = [
         title: 'Embed',
         rowLength: 1,
         items: [{
+            label: 'Vero',
+            icon: 'koenig/vero-logo',
+            desc: '/vero [test url]',
+            matches: ['vero'],
+            type: 'card',
+            replaceArg: 'embed',
+            params: ['url']
+        },{
             label: 'YouTube',
             icon: 'koenig/kg-card-type-youtube',
             desc: '/youtube [video url]',

@@ -183,7 +183,7 @@
                         </li>
                         <li class="nav-list-item">
                         <button type="button" {{action "showVeroWidgetForm" "vero-data"}} data-test-button="vero-data">
-                            <span>{{svg-jar "vero-logo"}} Vero card</span>
+                            <span>{{svg-jar "vero-logo"}} Vero Settings</span>
                         </button>
                         {{svg-jar "arrow-right" class="arrow-right"}}
                         </li>
@@ -201,11 +201,11 @@
 
          {{#if this.isAddingVeroWidget}}
           <div class="settings-menu settings-menu-pane settings-menu-pane-wide">
-                 <div class="settings-menu-header subview">
-                    <button aria-label="Close Vero card panel" class="back settings-menu-header-action" data-test-button="close-psm-subview" type="button" {{action "hideVeroWidgetForm"}}>{{svg-jar "arrow-left"}}<span class="hidden">Back</span></button>
-                    <h4>Vero card</h4>
-                    <div style="width:23px;"></div>
-                </div>
+             <div class="settings-menu-header subview">
+                <button aria-label="Close Vero card panel" class="back settings-menu-header-action" data-test-button="close-psm-subview" type="button" {{action "hideVeroWidgetForm"}}>{{svg-jar "arrow-left"}}<span class="hidden">Back</span></button>
+                <h4>Vero Settings</h4>
+                <div style="width:23px;"></div>
+            </div>
           </div>
          {{/if}}
         {{#if this.isViewingSubview}}
