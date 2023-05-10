@@ -9,7 +9,7 @@ import relativeToAbsolute from "../lib/relative-to-absolute";
 const {countWords, countImages} = ghostHelperUtils;
 
 @classic
-export default class KoenigCardHtml extends Component {
+export default class KoenigCardVero extends Component {
     // attrs
     payload = null;
     isSelected = false;
@@ -78,37 +78,19 @@ export default class KoenigCardHtml extends Component {
             // prevent Enter from triggering in the editor and removing text
             event.preventDefault();
 
-            let href = relativeToAbsolute(this._href, this.config.blogUrl);
-            this.set('_href', href);
-
-            if (this.source === 'direct') {
-                this.update(href);
-                this.cancel();
-                return;
-            }
-
-            // create a single editor runloop here so that we don't get
-            // separate remove and replace ops pushed onto the undo stack
-            this.editor.run((postEditor) => {
-                if (href) {
-                    this._replaceLink(href, postEditor);
-                } else {
-                    this._removeLinks(postEditor);
-                }
-            });
-
             this._updateHtml();
+            this.deselectCard();
         }
     }
 
     @action
     clear() {
-        this.set('_input1', '');
-        this._focusInput();
+        this.set('_input1', '');``
+        this._focusInput();``
     }
 
-    _updateHtml() {
-        this._updatePayloadAttr('html', this._input1);
+    _updateHtml() {``
+        this._updatePayloadAttr('html', `Vero Widget !!!!! ${this._input1}`);
     }
 
     @action

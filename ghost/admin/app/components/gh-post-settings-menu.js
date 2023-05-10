@@ -619,13 +619,11 @@ export default class GhPostSettingsMenu extends Component {
 
     @action
     showVeroWidgetForm() {
-        alert('showVeroWidgetForm');
         this.set('isAddingVeroWidget', true);
     }
 
     @action
     hideVeroWidgetForm() {
-        alert('hideVeroWidgetForm');
         this.set('isAddingVeroWidget', false);
     }
 }

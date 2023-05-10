@@ -261,11 +261,10 @@ export const CARD_MENU = [
         items: [{
             label: 'Vero',
             icon: 'koenig/vero-logo',
-            desc: '/vero [test url]',
+            desc: '/vero [add Vero Widget]',
             matches: ['vero'],
-            type: 'vero',
-            replaceArg: 'html',
-            params: ['url']
+            type: 'card',
+            replaceArg: 'vero'
         },{
             label: 'YouTube',
             icon: 'koenig/kg-card-type-youtube',
